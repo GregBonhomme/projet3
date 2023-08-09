@@ -1,23 +1,4 @@
-@font-face {
-    font-family: Roboto;
-    src: url(../assets/font/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: Shrikhand;
-    src: url(../assets/font/Shrikhand-Regular.ttf);
-}
-
-
 /* MAIN */
-
-* {
-    padding: 0px;
-    margin: 0px;
-    font-size: 16px;
-    font-family: Roboto;
-    font-weight: 500;
-}
 
 h1 {
     font-size: 24px;
@@ -42,34 +23,55 @@ h4 {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 
 /* IDs */
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    align-self: stretch;
+.appear {
+    animation-name: appear;
+    animation-duration: 4s;
 }
 
-#logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 63px;
-    padding-top: 10px;
-    margin-bottom: 5px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-#logo img {
-    width: 197px;
-    height: 36px;
+#loader {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 20px solid #99E2D0;
+    border-top: 22px solid #9356DC;
+    border-bottom: 22px solid #FF79DA;
+    border-radius: 50%;
+    width: 20%;
+    aspect-ratio: 100/100;
+    animation: spin 1.5s linear 2;
+}
+
+@keyframes spin {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
 }
 
 #location {
@@ -80,6 +82,7 @@ header {
     background-color: #EAEAEA;
     gap: 17px;
     height: 50px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
 #intro {
@@ -98,7 +101,14 @@ header {
 }
 
 #intro span {
+    font-size: 18px;
     padding: 0px 30px;
+}
+
+#tutorial_zone {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 #tutorial {
@@ -107,7 +117,27 @@ header {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: 50px 20px;
+    width: 100%;
+    max-width: 1080px;
+}
+
+#tutorial_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    box-sizing: border-box;
+    padding: 0px 10px;
+}
+
+#restaurants_zone {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+    width: 100%;
 }
 
 #restaurants {
@@ -117,35 +147,16 @@ header {
     justify-content: center;
     align-items: center;
     padding: 30px 20px;
+    max-width: 1080px;
 }
 
-footer {
+#restaurants_list {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-    background-color: rgba(53, 53, 53, 1);
-}
-
-#footer_logo {
-    font-family: Shrikhand;
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 5px;
-}
-
-nav a {
-    display: flex;
-    color: white;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 18px calc(18px + 1%);
 }
 
 
@@ -155,19 +166,12 @@ nav a {
     opacity: 0;
 }
 
-.btn {
-    color: white;
-    border-radius: 25px;
-    border: none;
-    padding: 15px;
-    background: linear-gradient(355deg, #9356DC 0%, #FF79DA 100%);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
 .tuto_step {
     display: flex;
     align-items: center;
-    width: 95%;
+    flex: 29% 1 0;
+    min-width: 300px;
+    max-width: 490px;
     height: 72px;
     gap: 20px;
     border-radius: 20px;
@@ -176,7 +180,7 @@ nav a {
 }
 
 .tuto_step span {
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .dot {
@@ -194,8 +198,10 @@ nav a {
 }
 
 .card {
-    width: 340px;
-    height: 251px;
+    flex: 45% 1 0;
+    min-width: 300px;
+    max-height: 250px;
+    max-width: 490px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,12 +213,16 @@ nav a {
 .card_img {
     width: 100%;
     height: 75%;
+    object-fit: cover;
+    aspect-ratio: 200/100;
+    overflow: hidden;
 }
 
 .card_info {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 
@@ -221,6 +231,7 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-left: 10px;
 }
 
 .card span {
@@ -233,9 +244,8 @@ nav a {
     justify-content: center;
     align-items: center;
     align-self: flex-end;
-    position: relative;
-    top: -200px;
-    right: -58px;
+    position: absolute;
+    margin: 20px;
     width: 80px;
     height: 29px;
     color: rgba(0, 135, 102, 1);
@@ -244,10 +254,14 @@ nav a {
     font-size: 14px;
 }
 
-svg {
-    transition: all 1s;
-}
 
-svg:hover {
-    fill: url(#grad1);
+/* RESPONSIVE */
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+    #restaurants_list {
+        gap: 50px calc(40px + 5%);
+    }
 }

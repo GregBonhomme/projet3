@@ -1,0 +1,181 @@
+/* MAIN */
+
+h1 {
+    font-size: 28px;
+    font-family: Shrikhand;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* IDS */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#return {
+    position: absolute;
+    left: 20px;
+    top: 22px;
+}
+
+#preview {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+#preview img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+}
+
+#main_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px 30px 0px 0px;
+    background-color: #F6F6F6;
+    padding: 30px 10px 40px 10px;
+    gap: 40px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1055px;
+    box-sizing: border-box;
+}
+
+#restaurant_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+}
+
+
+/* CLASSES */
+
+.sub_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 634px;
+}
+
+.sub_menu1 {
+    animation: 1s ease-in fade_in;
+    animation-iteration-count: 1;
+}
+
+.sub_menu2 {
+    animation: 2s ease-in fade_in;
+    animation-iteration-count: 1;
+}
+
+.sub_menu3 {
+    animation: 4s ease-in fade_in;
+    animation-iteration-count: 1;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.line {
+    border-top: 3px solid #99E2D0;
+    width: 40px;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    max-height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item_content {
+    width: 100%;
+    margin: 15px;
+    transition: all ease-in 0.5s;
+}
+
+.item_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_txt {
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.item_price {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cmd_btn {
+    align-self: center;
+    padding: 15px 50px;
+}
+
+.check_mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    position: relative;
+    right: -20px;
+    background-color: #99E2D0;
+    transition: all ease-in 0.5s;
+}
+
+.item:hover .check_mark {
+    width: 60px;
+    right: 0px;
+}
+
+.item:hover .item_content {
+    width: 86%;
+}
+
+.check_mark img {
+    width: 14px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: white;
+}

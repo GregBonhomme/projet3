@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/font/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Shrikhand;
+    src: url(../assets/font/Shrikhand-Regular.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-self: stretch;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+    padding-top: 10px;
+}
+
+#logo img {
+    width: 197px;
+    height: 36px;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    background-color: rgba(53, 53, 53, 1);
+}
+
+#footer_logo {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+nav a {
+    display: flex;
+    color: white;
+    gap: 10px;
+}
+
+
+/* CLASSES */
+
+.heart_zone {
+    width: 22px;
+    height: 21px;
+}
+
+.like_icon {
+    width: 22px;
+    height: 21px;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 400ms;
+}
+
+.like_icon_empty {
+    color: black;
+    position: absolute;
+}
+
+.like_icon_empty:hover {
+    opacity: 0;
+}
+
+.like_icon_full {
+    opacity: 0;
+    position: absolute;
+}
+
+.like_icon_full:hover {
+    opacity: 1;
+}
+
+.btn {
+    color: white;
+    border-radius: 25px;
+    border: none;
+    padding: 15px 20px;
+    background: linear-gradient(355deg, #9356DC 0%, #FF79DA 100%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.50);
+}
+
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row-reverse;
+        gap: 60px;
+        padding-top: 60px;
+        padding-right: 40px;
+    }
+    nav {
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-end;
+    }
+}
