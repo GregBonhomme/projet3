@@ -61,6 +61,7 @@ a {
     width: 20%;
     aspect-ratio: 100/100;
     animation: spin 1.5s linear 2;
+    pointer-events: none;
 }
 
 @keyframes spin {
