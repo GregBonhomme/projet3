@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/restaurants.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <title>Le délice des sens</title>
 </head>
 
@@ -26,18 +27,9 @@
             <div id="restaurant_title">
                 <h1>Le délice des sens</h1>
                 <div class="heart_zone">
-                    <svg class="like_icon like_icon_empty" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M12.7206 2.40551L12.7203 2.40576L11.8739 3.35732L11.5003 3.77727L11.1267 3.35732L10.2802 2.40576L10.2797 2.40514C8.28247 0.152585 5.09737 -0.169649 2.9764 1.80201C0.482212 4.1245 0.344816 8.32357 2.58455 10.8495L10.8987 20.2148C10.8987 20.2149 10.8988 20.2149 10.8988 20.2149C11.237 20.5955 11.7593 20.5955 12.0975 20.2149C12.0975 20.2149 12.0975 20.2149 12.0976 20.2148L20.4119 10.8493L20.412 10.8492C22.6556 8.32335 22.5183 4.12461 20.0243 1.80213L12.7206 2.40551ZM12.7206 2.40551C14.7223 0.15233 17.9032 -0.169452 20.024 1.80187L12.7206 2.40551Z" stroke="#101010"/>
-                    </svg>
-                    <svg class="like_icon like_icon_full" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" fill="url(#paint0_linear_25368_712)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_25368_712" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#9356DC"/>
-                            <stop offset="1" stop-color="#FF79DA"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
                 </div>
             </div>
             <article class="sub_menu">
@@ -46,112 +38,99 @@
                     <div class="line"></div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Tartare de thon</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Assaisonné au yuzu</span><span class="item_price">25€</span>
-                        </div>
+                        <span class="item_txt">Assaisonné au yuzu</span>
                     </div>
+                    <span class="item_price">25€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Bouchée de homard croustillant</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Et sa farandole de petits légumes</span><span class="item_price">35€</span>
-                        </div>
+                        <span class="item_txt">Et sa farandole de petits légumes</span>
                     </div>
+                    <span class="item_price">35€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Velouté de cèpes</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Aux truffes</span><span class="item_price">20€</span>
-                        </div>
+                        <span class="item_txt">Aux truffes</span>
                     </div>
+                    <span class="item_price">20€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
-            </article>
-            <article class="sub_menu">
                 <div>
                     <h2>Plats</h2>
                     <div class="line"></div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Poulet rôti aux herbes de Provence</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Et sa crème de truffe</span><span class="item_price">40€</span>
-                        </div>
+                        <span class="item_txt">Et sa crème de truffe</span>
                     </div>
+                    <span class="item_price">40€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Langouste rôtie</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Et ses légumes de saison</span><span class="item_price">35€</span>
-                        </div>
+                        <span class="item_txt">Et ses légumes de saison</span>
                     </div>
+                    <span class="item_price">35€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Côte de bœuf Angus</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Et sa purée de panais</span><span class="item_price">44€</span>
-                        </div>
+                        <span class="item_txt">Et sa purée de panais</span>
                     </div>
+                    <span class="item_price">44€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
-            </article>
-            <article class="sub_menu">
                 <div>
                     <h2>Desserts</h2>
                     <div class="line"></div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Farandole de desserts</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Du chef</span><span class="item_price">18€</span>
-                        </div>
+                        <span class="item_txt">Du chef</span>
                     </div>
+                    <span class="item_price">18€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Crème brulée</h3>
-                        <div class="item_info">
-                            <span class="item_txt">Revisitée</span><span class="item_price">22€</span>
-                        </div>
+                        <span class="item_txt">Revisitée</span>
                     </div>
+                    <span class="item_price">22€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item_content">
+                    <div class="item_info">
                         <h3>Tiramisu</h3>
-                        <div class="item_info">
-                            <span class="item_txt">À la noisette</span><span class="item_price">23€</span>
-                        </div>
+                        <span class="item_txt">À la noisette</span>
                     </div>
+                    <span class="item_price">23€</span>
                     <div class="check_mark">
                         <img src="assets/images/icons/check.png" alt="Marque de validation">
                     </div>
