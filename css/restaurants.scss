@@ -1,3 +1,5 @@
+/* ANIMATION */
+
 @mixin delay ($nb, $value) {
     @for $i from 1 to ($nb + 1) {
         &:nth-of-type(#{$i}) {
@@ -12,9 +14,11 @@
         opacity: 0;
         transform: translateY(50px);
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         transform: translateY(0px);
@@ -127,7 +131,7 @@ main {
     overflow: hidden;
     cursor: pointer;
     animation: ease-in fade_in;
-    @include delay(15, 0.25s)
+    @include delay(20, 0.25s)
 }
 
 .item_info {
